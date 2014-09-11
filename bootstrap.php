@@ -11,6 +11,8 @@
  */
 class bootstrap extends CApplicationComponent
 {
+	private $_pie;
+
 	private $_options = array();
 
 	private $_default = array(
@@ -72,9 +74,38 @@ class bootstrap extends CApplicationComponent
 	}
 
 	/**
+	 * 获取数据
+	 * @param  [type] $name [description]
+	 * @return [type]       [description]
+	 */
+	public function __get($name)
+	{
+		$methodName = 'get_'.$name;
+		if(method_exists ( $this->_pie , $methodName ))
+		{
+			$data = call_user_func(array($this->_pie, $methodName));
+
+			if($name == 'items')
+			{	
+				$items = array();
+				foreach ($data as $key => $val) 
+				{
+					$items[$key]['title'] = $val->get_title();
+					$items[$key]['description'] = $val->get_description();
+					$items[$key]['link'] = $val->get_link();
+					$items[$key]['date'] = $val->get_date();
+					$items[$key]['author'] = $val->get_author();
+				}
+				return $items;
+			}
+			return $data;
+		}
+	}
+
+	/**
 	 * 设置参数
 	 */
-	public function set($option = array())
+	public function config($option = array())
 	{
 		$this->_options = $option + $this->_default;
 
@@ -82,7 +113,7 @@ class bootstrap extends CApplicationComponent
 	}
 
 	/**
-	 * 图片重置类
+	 * 解析数据
 	 * @return [type] [description]
 	 */
 	public function parse()
@@ -92,28 +123,26 @@ class bootstrap extends CApplicationComponent
 			throw new CException('请在set方法里面使用set_feed_url键设置一个需要解析的rss值.');
 		}
 
-		$feed = new SimplePie();
+		$this->_pie = new SimplePie();
 
 		// 设置所有的参数
 		foreach ($this->_options as $key => $val) 
 		{
-			$feed->{$key}($val);
+			$this->_pie->{$key}($val);
 		}
 
 		// 初始化simplepie
-		if( $feed->init() )
+		if( $this->_pie->init() )
 		{
 			// 确保simplepie解析的是正确的mime-type类型
-			$feed->handle_content_type();
+			$this->_pie->handle_content_type();
 
-			return $feed;
+			return $this;
 		}
 		else
 		{
 			return false;
 		}
 	}
-
-	
 }
 ?>
