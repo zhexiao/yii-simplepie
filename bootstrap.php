@@ -1,4 +1,14 @@
 <?php  
+/**
+ * bootstrap 入口文件 
+ *
+ * Author(s): Zhe Xiao <zhebegin@gmail.com>
+ *
+ * Licensed under the MIT License
+ * Redistributions of files must retain the above copyright notice.
+ *
+ * @author Zhe Xiao <zhebegin@gmail.com>
+ */
 class bootstrap extends CApplicationComponent
 {
 	private $_options = array();
