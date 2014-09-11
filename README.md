@@ -3,26 +3,17 @@ yii-simplepie
 
 yii-simplepie is a yii extension for parse rss feeds：
 - simplepie：http://simplepie.org/
-- simplepie doc：http://simplepie.org/wiki/reference/start
+- simplepie document：http://simplepie.org/wiki/reference/start
 
 
-zResetImage的使用
+Usage
 ==================
-## 旋转图片
+## install extension in yii
+download all file and put it in yii extension folder, then add extension code in config main.php
 ```ruby
-	include 'zResetImage.php';
-	$fileName = 'apple.png';
-
-	try
-	{
-		$image = new zImage\zResetImage($fileName);
-		$image->rotate($degree);
-		$image->show() || save('other file');
-	}
-	catch(Exception $e)
-	{
-		echo $e->getMessage();
-	}
+	'simplepie' => array(
+		'class' => 'ext.simplepie-library.bootstrap'
+	),
 ```
 
 ## 图片比例重置
