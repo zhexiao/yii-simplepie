@@ -2,7 +2,7 @@
 /**
  * bootstrap 入口文件 
  *
- * Author(s): Zhe Xiao <zhebegin@gmail.com>
+ * Author: Zhe Xiao <zhebegin@gmail.com>
  *
  * Licensed under the MIT License
  * Redistributions of files must retain the above copyright notice.
