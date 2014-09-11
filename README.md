@@ -9,7 +9,7 @@ yii-simplepie is a yii extension for parse rss feeds：
 Usage
 ==================
 ## install extension in yii
-download all file and put it in yii extension folder, then add extension code in config main.php
+Download all file and put it in yii extension folder, then add the follow code in config/main.php
 ```ruby
 	'simplepie' => array(
 		'class' => 'ext.simplepie-library.bootstrap'
