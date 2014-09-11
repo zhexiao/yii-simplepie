@@ -113,5 +113,7 @@ class bootstrap extends CApplicationComponent
 			return false;
 		}
 	}
+
+	
 }
 ?>
