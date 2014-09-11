@@ -1,0 +1,22 @@
+{
+	"name": "yii-simplepie",
+	"description": "simplepie for yii extension",
+	"type": "library",
+	"version": "1.3",
+	"keywords": ["rss", "atom", "feeds"],
+	"homepage": "",
+	"license": "BSD-3-Clause",
+	"authors": [
+		{
+			"name": "Zhe Xiao",
+			"homepage": "https://github.com/zhebegin",
+			"role": "Creator"
+		}
+	],
+	"require": {
+		"php": ">=5.2.0"
+	},
+	"autoload": {
+	
+	}
+}
