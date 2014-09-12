@@ -68,18 +68,18 @@ Download all file and put it into yii extension folder, then add the follow code
 
 ## get feed attributes
 ```ruby
-	$feed->author — Get a single author for the feed. 
-	$feed->copyright — Get the feed copyright information.
-	$feed->description — Get the feed description.
-	$feed->encoding — Get the character set for the returned values.
-	$feed->favicon — Get the URL for the favicon of the feed's website.
-	$feed->item — Get a single item. 
-	$feed->items — Get all the items.
-	$feed->item_quantity — Get the number of items in the feed.
-	$feed->language — Get the feed language.
-	$feed->link — Get a single link.
-	$feed->links — Get all the links of a specific relation.
-	$feed->permalink — Get the first feed link (i.e. the permalink).
-	$feed->title — Get the feed title.
-	$feed->type — Get the type of feed.
+	$feed->author  // Get a single author for the feed. 
+	$feed->copyright  // Get the feed copyright information.
+	$feed->description  // Get the feed description.
+	$feed->encoding  // Get the character set for the returned values.
+	$feed->favicon  // Get the URL for the favicon of the feed's website.
+	$feed->item  // Get a single item. 
+	$feed->items  // Get all the items.
+	$feed->item_quantity  // Get the number of items in the feed.
+	$feed->language  // Get the feed language.
+	$feed->link  // Get a single link.
+	$feed->links  // Get all the links of a specific relation.
+	$feed->permalink  // Get the first feed link (i.e. the permalink).
+	$feed->title  // Get the feed title.
+	$feed->type  // Get the type of feed.
 ```
