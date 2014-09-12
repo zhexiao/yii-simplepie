@@ -51,8 +51,6 @@ class bootstrap extends CApplicationComponent
 
 		// 设置超时时间
 		'set_timeout' => 30,
-
-
 	);
 
 	/**
