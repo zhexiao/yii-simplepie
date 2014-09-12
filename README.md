@@ -25,6 +25,47 @@ Download all file and put it into yii extension folder, then add the follow code
 	))->parse();
 ```
 
+## all default configuration 
+```ruby
+	array(
+		// URL of the feed you want to parse
+		'set_feed_url' => '',
+
+		// Force SimplePie to parse the content, even if it doesn't believe it's a feed
+		'force_feed' => true,
+
+		// Enable/disable caching in SimplePie
+		'enable_cache' => false,
+
+		// Set the folder where the cache files should be written
+		'set_cache_location' => './cache',
+
+		// Set the minimum time for which a feed will be cached
+		'set_cache_duration' => 3600,
+
+		// Enable/disable the reordering of items into reverse chronological order
+		'enable_order_by_date' => true,
+
+		// Set a limit on how many items are returned per feed with Multifeeds
+		'set_item_limit' => 0,
+
+		// HTML attributes to strip
+		'strip_attributes' => array('alt', 'bgsound', 'onclick'),
+
+		// HTML tags to strip
+		'strip_htmltags' => array('base', 'blink', 'body', 'doctype', 'embed', 'font', 'form', 'frame', 'frameset', 'html', 'iframe', 'input', 'marquee', 'meta', 'noscript', 'object', 'param', 'script', 'style'),
+
+		// Override the character set within the feed
+		'set_input_encoding' => false,
+
+		// Set the output character set
+		'set_output_encoding' => 'UTF-8',
+
+		// Timeout for fetching remote files
+		'set_timeout' => 30,
+	);
+```
+
 ## get feed attributes
 ```ruby
 	$feed->author — Get a single author for the feed. 
