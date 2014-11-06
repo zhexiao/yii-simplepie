@@ -18,7 +18,7 @@ Download all file and put it into yii extension folder, then add the follow code
 
 ## configuration and initialization
 ```ruby
-	$feed = Yii::app -> simplepie->config(array(
+	$feed = Yii::app()->simplepie->config(array(
 		'set_feed_url' => $rssFeed,
 		'enable_cache' => true,
 		'set_cache_location' => Yii::app()->runtimePath . DIRECTORY_SEPARATOR . 'cache'
