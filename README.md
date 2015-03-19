@@ -10,14 +10,14 @@ Usage
 ==================
 ## install extension in yii
 Download all file and put it into yii extension folder, then add the follow code in config/main.php
-```ruby
+```php
 	'simplepie' => array(
 		'class' => 'ext.simplepie-library.bootstrap'
 	),
 ```
 
 ## configuration and initialization
-```ruby
+```php
 	$feed = Yii::app()->simplepie->config(array(
 		'set_feed_url' => $rssFeed,
 		'enable_cache' => true,
@@ -26,7 +26,7 @@ Download all file and put it into yii extension folder, then add the follow code
 ```
 
 ## all default configuration 
-```ruby
+```php
 	array(
 		// URL of the feed you want to parse
 		'set_feed_url' => '',
@@ -67,7 +67,7 @@ Download all file and put it into yii extension folder, then add the follow code
 ```
 
 ## get feed attributes
-```ruby
+```php
 	$feed->author  // Get a single author for the feed. 
 	$feed->copyright  // Get the feed copyright information.
 	$feed->description  // Get the feed description.
